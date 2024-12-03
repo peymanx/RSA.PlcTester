@@ -1,0 +1,9 @@
+﻿{
+  "plc": {
+    "ipAddress": "192.168.0.1",
+    "rack": 0,
+    "slot": 1,
+    "readAddress": "DB1.DBW0",
+    "writeAddress": "DB1.DBW0"
+  }
+}

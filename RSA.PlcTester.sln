@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA.PlcTester", "RSA.PlcTester\RSA.PlcTester.csproj", "{7A7336D4-9199-44E3-BD54-F670497E91A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A7336D4-9199-44E3-BD54-F670497E91A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7336D4-9199-44E3-BD54-F670497E91A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7336D4-9199-44E3-BD54-F670497E91A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7336D4-9199-44E3-BD54-F670497E91A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49D91BB4-BF37-4E4A-BFBF-0857CB347A9E}
+	EndGlobalSection
+EndGlobal

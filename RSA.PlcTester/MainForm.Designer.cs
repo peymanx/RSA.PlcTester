@@ -55,12 +55,20 @@ namespace RSA.PlcTester
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtArrayStartAddress = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtArrayLength = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtLog = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtIpAddress
@@ -89,7 +97,7 @@ namespace RSA.PlcTester
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblResult,
             this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 508);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 441);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(823, 22);
             this.statusStrip1.TabIndex = 3;
@@ -146,18 +154,18 @@ namespace RSA.PlcTester
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 36);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 91);
+            this.pictureBox2.Size = new System.Drawing.Size(161, 110);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(41, 296);
+            this.ConnectButton.Location = new System.Drawing.Point(24, 109);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(239, 39);
+            this.ConnectButton.Size = new System.Drawing.Size(197, 30);
             this.ConnectButton.TabIndex = 9;
             this.ConnectButton.Text = "Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -280,25 +288,97 @@ namespace RSA.PlcTester
             this.groupBox3.Controls.Add(this.txtRack);
             this.groupBox3.Controls.Add(this.txtSlot);
             this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.ConnectButton);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(41, 177);
+            this.groupBox3.Location = new System.Drawing.Point(39, 172);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(239, 114);
+            this.groupBox3.Size = new System.Drawing.Size(239, 151);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Config";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.txtArrayStartAddress);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.txtArrayLength);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Location = new System.Drawing.Point(39, 334);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(503, 100);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Buffer";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(297, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 39);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Get";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnGet_Clicked);
+            // 
+            // txtArrayStartAddress
+            // 
+            this.txtArrayStartAddress.Location = new System.Drawing.Point(121, 29);
+            this.txtArrayStartAddress.Name = "txtArrayStartAddress";
+            this.txtArrayStartAddress.Size = new System.Drawing.Size(133, 20);
+            this.txtArrayStartAddress.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(48, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "ArrayLength:";
+            // 
+            // txtArrayLength
+            // 
+            this.txtArrayLength.Location = new System.Drawing.Point(121, 55);
+            this.txtArrayLength.Name = "txtArrayLength";
+            this.txtArrayLength.Size = new System.Drawing.Size(133, 20);
+            this.txtArrayLength.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "ArrayStartAddress:";
+            // 
+            // txtLog
+            // 
+            this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(51)))), ((int)(((byte)(54)))));
+            this.txtLog.ForeColor = System.Drawing.Color.Lime;
+            this.txtLog.Location = new System.Drawing.Point(562, 334);
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.Size = new System.Drawing.Size(249, 100);
+            this.txtLog.TabIndex = 24;
+            this.txtLog.Text = "Log";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 530);
+            this.ClientSize = new System.Drawing.Size(823, 463);
+            this.Controls.Add(this.txtLog);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
@@ -313,6 +393,8 @@ namespace RSA.PlcTester
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,6 +427,13 @@ namespace RSA.PlcTester
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtArrayStartAddress;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtArrayLength;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtLog;
     }
 }
 

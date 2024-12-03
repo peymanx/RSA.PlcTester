@@ -106,6 +106,39 @@ namespace RSA.PlcTester
                 MessageBox.Show($"خطا در خواندن داده‌ها: {ex.Message}");
             }
         }
+
+        private void btnGet_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                if (plc != null && plc.IsConnected)
+                {
+                    // آدرس شروع آرایه و تعداد مقادیر از TextBox ها
+                    var arrayStartAddress = Convert.ToInt32(txtArrayStartAddress.Text);
+                    int arrayLength = Convert.ToInt32(txtArrayLength.Text);
+
+                    // خواندن مقادیر از PLC
+                    var values = plc.ReadBytes(DataType.DataBlock, 1, arrayStartAddress, arrayLength);
+
+                    // نمایش مقادیر در TextBox یا ListBox
+                    var result = "";
+                    foreach (var value in values)
+                    {
+                        result+=value.ToString() + Environment.NewLine;
+                    }
+
+                    txtLog.Text = result;
+                }
+                else
+                {
+                    MessageBox.Show("ابتدا به PLC متصل شوید.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطا در خواندن آرایه: {ex.Message}");
+            }
+        }
     }
 
 

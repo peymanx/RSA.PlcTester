@@ -97,7 +97,7 @@ namespace RSA.PlcTester
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblResult,
             this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 441);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 471);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(823, 22);
             this.statusStrip1.TabIndex = 3;
@@ -144,7 +144,7 @@ namespace RSA.PlcTester
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(586, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(574, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(227, 340);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -154,9 +154,9 @@ namespace RSA.PlcTester
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 36);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(161, 110);
+            this.pictureBox2.Size = new System.Drawing.Size(290, 176);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -173,7 +173,7 @@ namespace RSA.PlcTester
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 289);
+            this.button1.Location = new System.Drawing.Point(331, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 39);
             this.button1.TabIndex = 10;
@@ -183,7 +183,7 @@ namespace RSA.PlcTester
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(342, 247);
+            this.button2.Location = new System.Drawing.Point(331, 242);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 39);
             this.button2.TabIndex = 11;
@@ -261,7 +261,7 @@ namespace RSA.PlcTester
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtWriteAddress);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(342, 35);
+            this.groupBox1.Location = new System.Drawing.Point(331, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 20;
@@ -274,7 +274,7 @@ namespace RSA.PlcTester
             this.groupBox2.Controls.Add(this.txtWriteValue);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtReadValue);
-            this.groupBox2.Location = new System.Drawing.Point(342, 141);
+            this.groupBox2.Location = new System.Drawing.Point(331, 131);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
             this.groupBox2.TabIndex = 21;
@@ -290,9 +290,9 @@ namespace RSA.PlcTester
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.ConnectButton);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(39, 172);
+            this.groupBox3.Location = new System.Drawing.Point(39, 203);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(239, 151);
+            this.groupBox3.Size = new System.Drawing.Size(235, 151);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Config";
@@ -305,9 +305,9 @@ namespace RSA.PlcTester
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.txtArrayLength);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(39, 334);
+            this.groupBox4.Location = new System.Drawing.Point(39, 365);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(503, 100);
+            this.groupBox4.Size = new System.Drawing.Size(503, 89);
             this.groupBox4.TabIndex = 23;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Buffer";
@@ -358,12 +358,14 @@ namespace RSA.PlcTester
             // 
             this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(51)))), ((int)(((byte)(54)))));
-            this.txtLog.ForeColor = System.Drawing.Color.Lime;
-            this.txtLog.Location = new System.Drawing.Point(562, 334);
+            this.txtLog.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLog.ForeColor = System.Drawing.Color.Black;
+            this.txtLog.Location = new System.Drawing.Point(574, 333);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(249, 100);
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtLog.Size = new System.Drawing.Size(237, 121);
             this.txtLog.TabIndex = 24;
             this.txtLog.Text = "Log";
             // 
@@ -371,7 +373,7 @@ namespace RSA.PlcTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 463);
+            this.ClientSize = new System.Drawing.Size(823, 493);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -382,6 +384,7 @@ namespace RSA.PlcTester
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
